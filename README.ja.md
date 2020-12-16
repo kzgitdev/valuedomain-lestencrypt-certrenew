@@ -10,6 +10,13 @@ LetsencryptのDNS-01チャレンジを活用して、3ヶ月ごとにrenewを実
 Ubuntu:20.04 docker image
 docker コンテナでpython実行環境を構築
 
+```
+docker run -d -v /home/myname/data:/data -v /home/web/certs:/etc/letsencrypt -it ubuntu:20.04 
+# /data: Pythonスクリプトがあるディレクトリ
+# /etc/letsencrypt: Letsencrypt の各ドメインのファイル郡の格納場所
+```
+
+
 必要なパッケージ
 Python、dnsutils
 詳細はsetup.shをご覧ください。
