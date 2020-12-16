@@ -1,5 +1,5 @@
 ## 概要
-value-domain のAPIを使って、Letsencrypt のサーバーのレコード情報を追加・更新・削除するスクリプトです。
+value-domain のAPIを使って、Letsencrypt のTXTレコード情報を追加・更新・削除するスクリプトです。
 
 ## 用途
 LetsencryptのDNS-01チャレンジを活用して、3ヶ月ごとにrenewを実行するときに活用できます。
