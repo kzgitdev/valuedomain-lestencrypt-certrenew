@@ -55,9 +55,10 @@ cert.putRequest()
 3-3
 DNS/URL情報の削除
 削除したいレコードを記述し、DNS/URL情報を更新します
+```
 $ cert.removeRecords(['txt _acme-challenge txt L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU'])
 $ cert.putRequest()
-
+```
 3-4
 digコマンドでDNS/URL情報を確認する
 ```
