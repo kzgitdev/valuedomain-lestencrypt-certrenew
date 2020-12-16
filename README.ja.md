@@ -18,7 +18,9 @@ Python、dnsutils
 ## 使い方
 
 0. API KEYの発行・再発行
+
 Value-domainのAPIサーバーを使用するためのAPI KEYを取得します。
+
 https://www.value-domain.com/vdapi/
 
 1. apikey.txtにAPI KEYを記述する
@@ -37,14 +39,15 @@ $ ptyhon
 
 3-1.
 現在のDNS/URL情報を取得できます。
+
 cert.records
 
 3-2.
 DNS/URL情報の追加
-
-cert.addRecords(['txt _acme-challenge txt L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU'])
+```
+$ cert.addRecords(['txt _acme-challenge L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU'])
 *value domain のレコードの記述に従っています。
-
+```
 3-2
 DNS/URL情報の更新
 cert.putRequest()
@@ -74,7 +77,7 @@ $ cert.commandDig(['-t txt _acme-challenge.example.com'])
 
 ;; ANSWER SECTION:
 _acme-challenge.example.com. 60 IN     TXT     "L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU"
-_acme-challenge.example.com. 60 IN     TXT     "txt r4yhBYWHLmHx60h7NJj57P5M1XP5AwaS3CVCGZNg3YPucdBxoCn71Uta8kg0IhXwoZzSokqc3FJzNgz27FASTrwH3m5Q6pEfCWu"
+_acme-challenge.example.com. 60 IN     TXT     "r4yhBYWHLmHx60h7NJj57P5M1XP5AwaS3CVCGZNg3YPucdBxoCn71Uta8kg0IhXwoZzSokqc3FJzNgz27FASTrwH3m5Q6pEfCWu"
 
 ;; Query time: 28 msec
 ;; SERVER: 54.65.150.1#53(54.65.150.1)
