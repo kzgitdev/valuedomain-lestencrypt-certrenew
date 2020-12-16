@@ -45,29 +45,36 @@ $ ptyhon
 3.関数について
 
 3-1.
+
 現在のDNS/URL情報を取得できます。
 
 cert.records
 
 3-2.
+
 DNS/URL情報の追加
 ```
 $ cert.addRecords(['txt _acme-challenge L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU'])
 *value domain のレコードの記述に従っています。
 ```
-3-2
+3-2.
+
 DNS/URL情報の更新
 cert.putRequest()
 
-3-3
+3-3.
+
 DNS/URL情報の削除
+
 削除したいレコードを記述し、DNS/URL情報を更新します
 ```
 $ cert.removeRecords(['txt _acme-challenge txt L31X44xN2NMC65AQsqxfdSW6unlvSb2dKrHHQiVk6A2JWcMDk9d0I8J4GsdGKyEhsSpNxUgLOm9I9STlOLS5Kg0JAJ1WKrMIfTU'])
 $ cert.putRequest()
 ```
-3-4
+3-4.
+
 digコマンドでDNS/URL情報を確認する
+
 ```
 $ cert.commandDig(['-t txt _acme-challenge.example.com'])
 ; <<>> DiG 9.16.1-Ubuntu <<>> @ns1.value-domain.com -t txt _acme-challenge.example.com
