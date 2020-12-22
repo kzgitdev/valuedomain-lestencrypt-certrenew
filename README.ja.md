@@ -11,9 +11,18 @@ Ubuntu:20.04 docker image
 docker コンテナでpython実行環境を構築
 
 ```
-docker run -d -v /home/myname/data:/data -v /home/web/certs:/etc/letsencrypt -it ubuntu:20.04 
+例）コンテナイメージUbuntu:20.04 LTSを起動するコマンド
+docker run -it -d -v /home/myname/data:/data -v /home/myname/certs:/etc/letsencrypt --name ubuntu2004 -it ubuntu:20.04 
+
 # /data: Pythonスクリプトがあるディレクトリ
 # /etc/letsencrypt: Letsencrypt の各ドメインのファイル郡の格納場所
+
+docker run option
+-i: --interactive
+-t: --tty
+-d: --detach
+-v: --volume list
+--name: contaner name
 ```
 
 
